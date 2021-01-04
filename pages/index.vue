@@ -1,8 +1,8 @@
 <template>
   <div class="container">
     <div>
-      <Logo />
-      <h1 class="title">aillevia.com</h1>
+      <h1 class="title">Aillevia.com</h1>
+      <!-- <Logo />
       <div class="links">
         <a
           href="https://nuxtjs.org/"
@@ -20,13 +20,23 @@
         >
           GitHub
         </a>
-      </div>
+      </div> -->
+
+      <!-- <nuxt-link :to="localePath('index')">{{ $t('welcome') }}</nuxt-link>
+      <nuxt-link :to="localePath('/')">{{ $t('welcome') }}</nuxt-link>
+      <nuxt-link :to="localePath('index', 'en')">Homepage in English</nuxt-link>
+      <nuxt-link :to="switchLocalePath('en')">English</nuxt-link>
+      <nuxt-link :to="switchLocalePath('fr')">Français</nuxt-link> -->
     </div>
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  mounted() {
+    // console.log('this locale default ', this.$i18n.locale)
+  },
+}
 </script>
 
 <style>

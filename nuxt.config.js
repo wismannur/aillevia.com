@@ -44,7 +44,7 @@ export default {
       {
         hid: 'og:image:alt',
         property: 'og:image:alt',
-        content: 'NuxtJS',
+        content: 'Aillevia',
       },
       {
         hid: 'twitter:image',

@@ -17,10 +17,11 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "PRE_COMMIT=true lint-staged"
     }
   },
   "dependencies": {
+    "@glidejs/glide": "^3.4.1",
     "@nuxt/content": "^1.9.0",
     "@nuxtjs/axios": "^5.12.2",
     "@nuxtjs/pwa": "^3.0.2",

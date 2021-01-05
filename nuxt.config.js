@@ -97,6 +97,10 @@ export default {
     '@nuxt/content',
     'nuxt-i18n',
   ],
+  generate: {
+    fallback: false,
+    routes: ['/', '404'],
+  },
 
   // https://i18n.nuxtjs.org/setup
   i18n: {

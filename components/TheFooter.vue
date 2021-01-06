@@ -13,9 +13,9 @@
             <ul class="list-reset">
               <li class="pb-2 block">
                 <a
-                  href="mailto:test.email0123@elyssi.com"
+                  href="mailto:test.email0123@aillevia.com"
                   class="font-hkregular text-white transition-colors hover:text-primary text-base tracking-wide"
-                  >test.email0123@elyssi.com</a
+                  >test.email0123@aillevia.com</a
                 >
               </li>
 
@@ -29,9 +29,9 @@
 
               <li class="pb-2 block">
                 <a
-                  href="https://elyssi.tailwindmade.com"
+                  href="https://aillevia.tailwindmade.com"
                   class="font-hkregular text-white transition-colors hover:text-primary text-base tracking-wide"
-                  >Elyssi</a
+                  >Aillevia</a
                 >
               </li>
             </ul>
@@ -40,7 +40,7 @@
             <a
               href="/"
               class="font-butlerregular text-white text-4xl uppercase tracking-wider"
-              >Elyssi.</a
+              >AILLEVIA</a
             >
             <div class="flex items-center justify-center pt-5">
               <a href="https://www.google.com" class="group">
@@ -79,7 +79,7 @@
               <a href="https://www.google.com" class="group">
                 <span class="sr-only">Social link</span>
                 <div
-                  class="bg-white group-hover:bg-primary rounded-full px-2 py-2 flex items-center mr-5 transition-colors"
+                  class="bg-white group-hover:bg-primary rounded-full px-2 py-2 flex items-center transition-colors"
                 >
                   <i
                     class="bx bxl-pinterest text-secondary transition-colors group-hover:text-white"

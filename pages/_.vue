@@ -60,12 +60,12 @@ export default {
           media: 'screen',
           crossorigin: 'anonymous',
         },
-        {
-          rel: 'stylesheet',
-          href: '/assets/styles/main.min.css',
-          media: 'screen',
-          crossorigin: 'anonymous',
-        },
+        // {
+        //   rel: 'stylesheet',
+        //   href: '/assets/styles/main.min.css',
+        //   media: 'screen',
+        //   crossorigin: 'anonymous',
+        // },
         {
           rel: 'stylesheet',
           href:

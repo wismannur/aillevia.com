@@ -16,7 +16,7 @@
                     <h3
                       class="font-butlermedium text-secondary text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
                     >
-                      Elyssi New Men’s Outdoor Collection
+                      Aillevia New Men’s Outdoor Collection
                     </h3>
                     <a
                       href="/collection-grid"
@@ -38,7 +38,7 @@
                     <h3
                       class="font-butlermedium text-secondary text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
                     >
-                      Blake by Elyssi <br />
+                      Blake by Aillevia <br />
                       30% off
                     </h3>
                     <a
@@ -220,7 +220,7 @@
               <h1
                 class="font-butlerregular text-secondary text-3xl md:text-4xl lg:text-7xl"
               >
-                Trending Elyssi Collections
+                Trending Aillevia Collections
               </h1>
               <p class="font-hkregular text-secondary-lighter text-lg pt-4">
                 Checkout our newest trends this coming season
@@ -293,7 +293,7 @@
                 <h3
                   class="font-hksemibold text-secondary text-xl sm:text-2xl md:text-3xl"
                 >
-                  Anabelle Purses by Elyssi
+                  Anabelle Purses by Aillevia
                 </h3>
                 <a href="/collection-list" class="flex items-center pt-5 group">
                   <div
@@ -321,7 +321,7 @@
                 class="font-hksemibold text-secondary text-xl sm:text-2xl md:text-3xl"
               >
                 W.W. Shoes <br />
-                by Elyssi
+                by Aillevia
               </h3>
               <a href="/collection-list" class="flex items-center pt-5 group">
                 <div
@@ -349,7 +349,7 @@
               <h2
                 class="font-butlerregular text-secondary text-3xl md:text-4xl lg:text-7xl"
               >
-                Elyssi’s trends
+                Aillevia’s trends
               </h2>
               <p
                 class="font-hkregular text-secondary-lighter text-lg md:text-xl pt-2"
@@ -3715,12 +3715,12 @@ export default {
           media: 'screen',
           crossorigin: 'anonymous',
         },
-        {
-          rel: 'stylesheet',
-          href: '/assets/styles/main.min.css',
-          media: 'screen',
-          crossorigin: 'anonymous',
-        },
+        // {
+        //   rel: 'stylesheet',
+        //   href: '/assets/styles/main.min.css',
+        //   media: 'screen',
+        //   crossorigin: 'anonymous',
+        // },
         {
           rel: 'stylesheet',
           href:

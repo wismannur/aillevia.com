@@ -49,7 +49,7 @@
           <a href="/">
             AILLEVIA
             <!-- <img
-              src="https://d33wubrfki0l68.cloudfront.net/23b5f665f19d2465fb9751d325b522bda9614e53/c3543/assets/img/logo-elyssi.svg"
+              src="https://d33wubrfki0l68.cloudfront.net/23b5f665f19d2465fb9751d325b522bda9614e53/c3543/assets/img/logo-aillevia.svg"
               class="w-28 sm:w-48 h-auto"
               alt="logo"
             /> -->
@@ -299,9 +299,10 @@
                     <div class="flex-1">
                       <div
                         class="z-0 bg-contain bg-right-bottom bg-no-repeat absolute inset-0"
-                        style="
-                          background-image: url(/assets/img/bg-mega-menu.png);
-                        "
+                        :style="{
+                          'background-image':
+                            'url(/assets/img/bg-mega-menu.png)',
+                        }"
                       ></div>
                     </div>
                   </div>

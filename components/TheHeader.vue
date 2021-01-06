@@ -1,7 +1,7 @@
 <template>
   <div class="shadow-xs">
     <div class="container relative">
-      <div class="py-6 lg:py-10 z-50 relative">
+      <div class="py-6 lg:py-8 z-50 relative">
         <div class="flex justify-between items-center">
           <div class="flex items-center lg:hidden">
             <div class="block lg:hidden">
@@ -134,7 +134,7 @@
                   ></i>
                 </div>
                 <div
-                  class="pt-5 absolute mt-20 top-0 left-0 right-0 z-50 w-2/3 mx-auto opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto"
+                  class="pt-10 absolute mt-10 top-0 left-0 right-0 z-50 w-2/3 mx-auto opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto"
                 >
                   <div
                     class="transition-all flex bg-white shadow-lg p-8 rounded-b relative"

@@ -17,13 +17,13 @@
             Filter
           </p>
           <div class="flex items-center border border-grey-darker p-2 rounded">
-            <a href="/collection-list"
+            <a href="javascript:;" @click="filter = 'list'"
               ><i
                 class="bx bx-menu text-grey-darker hover:text-secondary-light text-xl leading-none block transition-colors"
               ></i
             ></a>
             <div class="w-px h-4 mx-2 bg-grey-darker"></div>
-            <a href="/collection-grid"
+            <a href="javascript:;" @click="filter = 'grid'"
               ><i
                 class="bx bxs-grid text-grey-darker hover:text-secondary-light text-xl leading-none block transition-colors"
               ></i
@@ -33,9 +33,7 @@
         <div
           class="flex items-center justify-center sm:justify-end mt-6 sm:mt-0 w-76"
         >
-          <p class="font-hkregular text-secondary md:text-lg mr-2 -mt-2">
-            Sort by:
-          </p>
+          <p class="font-hkregular text-secondary md:text-lg mr-2">Sort by:</p>
 
           <select class="w-2/3 form-select pl-1 pr-3">
             <option value="0">Best Match</option>
@@ -46,12 +44,15 @@
       </div>
       <!-- END FILTER -->
 
-      <!-- BEGIN LIST COLLECTION -->
+      <!-- BEGIN LIST COLLECTION - GRID -->
       <div
+        v-if="filter === 'grid'"
         class="flex flex-wrap justify-between py-5 lg:pb-10 xl:pb-12 sm:-px-3 md:-mx-5"
       >
         <div
-          class="w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 relative group pb-12 lg:last:hidden xl:last:block"
+          v-for="idx in 12"
+          :key="idx"
+          class="w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 relative group pb-12 lg:last:hidden xl:last:block zoom-in"
         >
           <div class="sm:px-3 md:px-5">
             <div class="relative rounded flex justify-center items-center">
@@ -120,1101 +121,97 @@
             </div>
           </div>
         </div>
+      </div>
+      <!-- END LIST COLLECTION - GRID -->
 
-        <div
-          class="w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 relative group pb-12 lg:last:hidden xl:last:block"
-        >
-          <div class="sm:px-3 md:px-5">
-            <div class="relative rounded flex justify-center items-center">
-              <div
-                class="w-full h-68 bg-center bg-no-repeat bg-cover"
-                style="background-image: url(/assets/img/backpack-1.png)"
-              ></div>
-              <span
-                class="absolute top-0 right-0 bg-white px-5 py-1 mt-4 mr-4 rounded-full font-hkbold text-v-blue text-sm uppercase tracking-wide"
-              >
-                trend
-              </span>
-              <div
-                class="absolute inset-0 bg-secondary opacity-0 group-hover:opacity-85 pointer-events-none group-hover:pointer-events-auto transition-all overflow-hidden rounded"
-              ></div>
-              <div
-                class="absolute opacity-0 transition-opacity group-hover:opacity-100 flex justify-center items-center py-28 inset-0 group"
-              >
-                <a
-                  href="/cart"
-                  class="bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all mr-3"
+      <!-- BEGIN LIST COLLECTION -->
+      <div v-else class="flex flex-wrap py-5 justify-between lg:-mx-5">
+        <div v-for="idx in 8" :key="idx" class="w-full lg:w-1/2 lg:px-5">
+          <div
+            class="flex flex-col sm:flex-row items-center border border-grey-dark mb-8 sm:mb-10 lg:mb-12 group shadow-none hover:shadow-lg rounde transition-shadowd zoom-in"
+          >
+            <div class="w-full sm:w-2/5 lg:w-5/11 relative">
+              <div class="relative rounded-l">
+                <div
+                  class="w-full h-68 bg-center bg-no-repeat bg-cover"
+                  style="background-image: url(/assets/img/backpack-1.png)"
+                ></div>
+                <span
+                  class="absolute top-0 right-0 bg-white px-5 py-1 mt-4 mr-4 rounded-full font-hkbold text-v-green text-sm uppercase tracking-wide"
                 >
-                  <img
-                    src="/assets/img/icons/icon-cart.svg "
-                    class="h-6 w-6"
-                    alt="icon cart"
-                  />
-                </a>
-                <a
-                  href="/product"
-                  class="bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all mr-3"
+                  New
+                </span>
+                <div
+                  class="absolute inset-0 bg-secondary opacity-0 group-hover:opacity-85 pointer-events-none group-hover:pointer-events-auto transition-all overflow-hidden rounded-l"
+                ></div>
+                <div
+                  class="absolute opacity-0 group-hover:opacity-100 flex justify-center items-center py-28 inset-0 group hover:shadow-lg transition-all"
                 >
-                  <img
-                    src="/assets/img/icons/icon-search.svg"
-                    class="h-6 w-6"
-                    alt="icon search"
-                  />
-                </a>
-                <a
-                  href="/account/wishlist/"
-                  class="bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all"
-                >
-                  <img
-                    src="/assets/img/icons/icon-heart.svg"
-                    class="h-6 w-6"
-                    alt="icon heart"
-                  />
-                </a>
-              </div>
-            </div>
-            <div class="flex justify-between items-center pt-6">
-              <div>
-                <h3 class="font-hkregular text-base text-secondary">
-                  Floral Chick
-                </h3>
-                <div class="flex items-center">
-                  <div class="flex items-center">
-                    <i class="bx bxs-star text-primary"></i>
-                    <i class="bx bxs-star text-primary"></i>
-                    <i class="bx bxs-star text-primary"></i>
-                    <i class="bx bxs-star text-primary"></i>
-                    <i class="bx bxs-star text-primary"></i>
-                  </div>
-                  <p class="font-hkregular text-sm text-secondary ml-2">(45)</p>
+                  <a
+                    href="/cart"
+                    class="bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all mr-3"
+                  >
+                    <img
+                      src="/assets/img/icons/icon-cart.svg "
+                      class="h-6 w-6"
+                      alt="icon cart"
+                    />
+                  </a>
+                  <a
+                    href="/product"
+                    class="bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all mr-3"
+                  >
+                    <img
+                      src="/assets/img/icons/icon-search.svg"
+                      class="h-6 w-6"
+                      alt="icon search"
+                    />
+                  </a>
+                  <a
+                    href="/account/wishlist/"
+                    class="bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all"
+                  >
+                    <img
+                      src="/assets/img/icons/icon-heart.svg"
+                      class="h-6 w-6"
+                      alt="icon heart"
+                    />
+                  </a>
                 </div>
               </div>
-              <span class="font-hkbold text-primary text-xl">$50.0</span>
             </div>
-          </div>
-        </div>
-
-        <div
-          class="w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 relative group pb-12 lg:last:hidden xl:last:block"
-        >
-          <div class="sm:px-3 md:px-5">
-            <div class="relative rounded flex justify-center items-center">
-              <div
-                class="w-full h-68 bg-center bg-no-repeat bg-cover"
-                style="background-image: url(/assets/img/backpack-1.png)"
-              ></div>
-              <span
-                class="absolute top-0 right-0 bg-white px-5 py-1 mt-4 mr-4 rounded-full font-hkbold text-primary-light text-sm uppercase tracking-wide"
+            <div class="w-full sm:w-3/5 lg:w-6/11 px-6 py-6 sm:py-0">
+              <h3 class="font-hkregular text-xl xl:text-2xl text-grey-darkest">
+                Cat eye
+              </h3>
+              <span class="font-hkbold text-secondary text-xl block pt-1"
+                >$75.0</span
               >
-                25%
-              </span>
-              <div
-                class="absolute inset-0 bg-secondary opacity-0 group-hover:opacity-85 pointer-events-none group-hover:pointer-events-auto transition-all overflow-hidden rounded"
-              ></div>
-              <div
-                class="absolute opacity-0 transition-opacity group-hover:opacity-100 flex justify-center items-center py-28 inset-0 group"
+              <span class="pt-4 font-hkbold text-v-green text-base block"
+                >In Stock</span
               >
-                <a
-                  href="/cart"
-                  class="bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all mr-3"
-                >
-                  <img
-                    src="/assets/img/icons/icon-cart.svg "
-                    class="h-6 w-6"
-                    alt="icon cart"
-                  />
-                </a>
-                <a
-                  href="/product"
-                  class="bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all mr-3"
-                >
-                  <img
-                    src="/assets/img/icons/icon-search.svg"
-                    class="h-6 w-6"
-                    alt="icon search"
-                  />
-                </a>
-                <a
-                  href="/account/wishlist/"
-                  class="bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all"
-                >
-                  <img
-                    src="/assets/img/icons/icon-heart.svg"
-                    class="h-6 w-6"
-                    alt="icon heart"
-                  />
-                </a>
-              </div>
-            </div>
-            <div class="flex justify-between items-center pt-6">
-              <div>
-                <h3 class="font-hkregular text-base text-secondary">
-                  Coffee Cream
-                </h3>
+              <p
+                class="font-hkregular text-grey-darkest pt-2 text-sm xl:text-base"
+              >
+                Elyssi sunglasses provides a new way to protect your eyes from
+                the sun’s UV light, because of its polarized lenses.
+              </p>
+              <div class="flex items-center pt-3 xl:pt-5">
                 <div class="flex items-center">
-                  <div class="flex items-center">
-                    <i class="bx bxs-star text-primary"></i>
-                    <i class="bx bxs-star text-primary"></i>
-                    <i class="bx bxs-star text-primary"></i>
-                    <i class="bx bxs-star text-primary"></i>
-                    <i class="bx bxs-star text-primary"></i>
-                  </div>
-                  <p class="font-hkregular text-sm text-secondary ml-2">(45)</p>
+                  <i class="bx bxs-star text-primary"></i>
+                  <i class="bx bxs-star text-primary"></i>
+                  <i class="bx bxs-star text-primary"></i>
+                  <i class="bx bxs-star text-primary"></i>
+                  <i class="bx bxs-star text-primary"></i>
                 </div>
+                <p class="font-hkregular text-sm text-secondary ml-2">45</p>
               </div>
-              <span class="font-hkbold text-primary text-xl">$65.0</span>
-            </div>
-          </div>
-        </div>
-
-        <div
-          class="w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 relative group pb-12 lg:last:hidden xl:last:block"
-        >
-          <div class="sm:px-3 md:px-5">
-            <div class="relative rounded flex justify-center items-center">
-              <div
-                class="w-full h-68 bg-center bg-no-repeat bg-cover"
-                style="background-image: url(/assets/img/backpack-1.png)"
-              ></div>
-              <span
-                class="absolute top-0 right-0 bg-white px-5 py-1 mt-4 mr-4 rounded-full font-hkbold text-v-red text-sm uppercase tracking-wide"
-              >
-                Hot
-              </span>
-              <div
-                class="absolute inset-0 bg-secondary opacity-0 group-hover:opacity-85 pointer-events-none group-hover:pointer-events-auto transition-all overflow-hidden rounded"
-              ></div>
-              <div
-                class="absolute opacity-0 transition-opacity group-hover:opacity-100 flex justify-center items-center py-28 inset-0 group"
-              >
-                <a
-                  href="/cart"
-                  class="bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all mr-3"
-                >
-                  <img
-                    src="/assets/img/icons/icon-cart.svg "
-                    class="h-6 w-6"
-                    alt="icon cart"
-                  />
-                </a>
-                <a
-                  href="/product"
-                  class="bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all mr-3"
-                >
-                  <img
-                    src="/assets/img/icons/icon-search.svg"
-                    class="h-6 w-6"
-                    alt="icon search"
-                  />
-                </a>
-                <a
-                  href="/account/wishlist/"
-                  class="bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all"
-                >
-                  <img
-                    src="/assets/img/icons/icon-heart.svg"
-                    class="h-6 w-6"
-                    alt="icon heart"
-                  />
-                </a>
-              </div>
-            </div>
-            <div class="flex justify-between items-center pt-6">
-              <div>
-                <h3 class="font-hkregular text-base text-secondary">
-                  Black Blake
-                </h3>
-                <div class="flex items-center">
-                  <div class="flex items-center">
-                    <i class="bx bxs-star text-primary"></i>
-                    <i class="bx bxs-star text-primary"></i>
-                    <i class="bx bxs-star text-primary"></i>
-                    <i class="bx bxs-star text-primary"></i>
-                    <i class="bx bxs-star text-primary"></i>
-                  </div>
-                  <p class="font-hkregular text-sm text-secondary ml-2">(45)</p>
-                </div>
-              </div>
-              <span class="font-hkbold text-primary text-xl">$115.0</span>
-            </div>
-          </div>
-        </div>
-
-        <div
-          class="w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 relative group pb-12 lg:last:hidden xl:last:block"
-        >
-          <div class="sm:px-3 md:px-5">
-            <div class="relative rounded flex justify-center items-center">
-              <div
-                class="w-full h-68 bg-center bg-no-repeat bg-cover"
-                style="background-image: url(/assets/img/backpack-1.png)"
-              ></div>
-              <span
-                class="absolute top-0 right-0 bg-white px-5 py-1 mt-4 mr-4 rounded-full font-hkbold text-v-green text-sm uppercase tracking-wide"
-              >
-                New
-              </span>
-              <div
-                class="absolute inset-0 bg-secondary opacity-0 group-hover:opacity-85 pointer-events-none group-hover:pointer-events-auto transition-all overflow-hidden rounded"
-              ></div>
-              <div
-                class="absolute opacity-0 transition-opacity group-hover:opacity-100 flex justify-center items-center py-28 inset-0 group"
-              >
-                <a
-                  href="/cart"
-                  class="bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all mr-3"
-                >
-                  <img
-                    src="/assets/img/icons/icon-cart.svg "
-                    class="h-6 w-6"
-                    alt="icon cart"
-                  />
-                </a>
-                <a
-                  href="/product"
-                  class="bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all mr-3"
-                >
-                  <img
-                    src="/assets/img/icons/icon-search.svg"
-                    class="h-6 w-6"
-                    alt="icon search"
-                  />
-                </a>
-                <a
-                  href="/account/wishlist/"
-                  class="bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all"
-                >
-                  <img
-                    src="/assets/img/icons/icon-heart.svg"
-                    class="h-6 w-6"
-                    alt="icon heart"
-                  />
-                </a>
-              </div>
-            </div>
-            <div class="flex justify-between items-center pt-6">
-              <div>
-                <h3 class="font-hkregular text-base text-secondary">
-                  Woody Blake
-                </h3>
-                <div class="flex items-center">
-                  <div class="flex items-center">
-                    <i class="bx bxs-star text-primary"></i>
-                    <i class="bx bxs-star text-primary"></i>
-                    <i class="bx bxs-star text-primary"></i>
-                    <i class="bx bxs-star text-primary"></i>
-                    <i class="bx bxs-star text-primary"></i>
-                  </div>
-                  <p class="font-hkregular text-sm text-secondary ml-2">(45)</p>
-                </div>
-              </div>
-              <span class="font-hkbold text-primary text-xl">$110.0</span>
-            </div>
-          </div>
-        </div>
-
-        <div
-          class="w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 relative group pb-12 lg:last:hidden xl:last:block"
-        >
-          <div class="sm:px-3 md:px-5">
-            <div class="relative rounded flex justify-center items-center">
-              <div
-                class="w-full h-68 bg-center bg-no-repeat bg-cover"
-                style="background-image: url(/assets/img/backpack-1.png)"
-              ></div>
-              <span
-                class="absolute top-0 right-0 bg-white px-5 py-1 mt-4 mr-4 rounded-full font-hkbold text-v-blue text-sm uppercase tracking-wide"
-              >
-                Trend
-              </span>
-              <div
-                class="absolute inset-0 bg-secondary opacity-0 group-hover:opacity-85 pointer-events-none group-hover:pointer-events-auto transition-all overflow-hidden rounded"
-              ></div>
-              <div
-                class="absolute opacity-0 transition-opacity group-hover:opacity-100 flex justify-center items-center py-28 inset-0 group"
-              >
-                <a
-                  href="/cart"
-                  class="bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all mr-3"
-                >
-                  <img
-                    src="/assets/img/icons/icon-cart.svg "
-                    class="h-6 w-6"
-                    alt="icon cart"
-                  />
-                </a>
-                <a
-                  href="/product"
-                  class="bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all mr-3"
-                >
-                  <img
-                    src="/assets/img/icons/icon-search.svg"
-                    class="h-6 w-6"
-                    alt="icon search"
-                  />
-                </a>
-                <a
-                  href="/account/wishlist/"
-                  class="bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all"
-                >
-                  <img
-                    src="/assets/img/icons/icon-heart.svg"
-                    class="h-6 w-6"
-                    alt="icon heart"
-                  />
-                </a>
-              </div>
-            </div>
-            <div class="flex justify-between items-center pt-6">
-              <div>
-                <h3 class="font-hkregular text-base text-secondary">
-                  Party Blake
-                </h3>
-                <div class="flex items-center">
-                  <div class="flex items-center">
-                    <i class="bx bxs-star text-primary"></i>
-                    <i class="bx bxs-star text-primary"></i>
-                    <i class="bx bxs-star text-primary"></i>
-                    <i class="bx bxs-star text-primary"></i>
-                    <i class="bx bxs-star text-primary"></i>
-                  </div>
-                  <p class="font-hkregular text-sm text-secondary ml-2">(45)</p>
-                </div>
-              </div>
-              <span class="font-hkbold text-primary text-xl">$130.0</span>
-            </div>
-          </div>
-        </div>
-
-        <div
-          class="w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 relative group pb-12 lg:last:hidden xl:last:block"
-        >
-          <div class="sm:px-3 md:px-5">
-            <div class="relative rounded flex justify-center items-center">
-              <div
-                class="w-full h-68 bg-center bg-no-repeat bg-cover"
-                style="background-image: url(/assets/img/backpack-1.png)"
-              ></div>
-              <span
-                class="absolute top-0 right-0 bg-white px-5 py-1 mt-4 mr-4 rounded-full font-hkbold text-primary-light text-sm uppercase tracking-wide"
-              >
-                25%
-              </span>
-              <div
-                class="absolute inset-0 bg-secondary opacity-0 group-hover:opacity-85 pointer-events-none group-hover:pointer-events-auto transition-all overflow-hidden rounded"
-              ></div>
-              <div
-                class="absolute opacity-0 transition-opacity group-hover:opacity-100 flex justify-center items-center py-28 inset-0 group"
-              >
-                <a
-                  href="/cart"
-                  class="bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all mr-3"
-                >
-                  <img
-                    src="/assets/img/icons/icon-cart.svg "
-                    class="h-6 w-6"
-                    alt="icon cart"
-                  />
-                </a>
-                <a
-                  href="/product"
-                  class="bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all mr-3"
-                >
-                  <img
-                    src="/assets/img/icons/icon-search.svg"
-                    class="h-6 w-6"
-                    alt="icon search"
-                  />
-                </a>
-                <a
-                  href="/account/wishlist/"
-                  class="bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all"
-                >
-                  <img
-                    src="/assets/img/icons/icon-heart.svg"
-                    class="h-6 w-6"
-                    alt="icon heart"
-                  />
-                </a>
-              </div>
-            </div>
-            <div class="flex justify-between items-center pt-6">
-              <div>
-                <h3 class="font-hkregular text-base text-secondary">
-                  Not Ballerina Blake
-                </h3>
-                <div class="flex items-center">
-                  <div class="flex items-center">
-                    <i class="bx bxs-star text-primary"></i>
-                    <i class="bx bxs-star text-primary"></i>
-                    <i class="bx bxs-star text-primary"></i>
-                    <i class="bx bxs-star text-primary"></i>
-                    <i class="bx bxs-star text-primary"></i>
-                  </div>
-                  <p class="font-hkregular text-sm text-secondary ml-2">(45)</p>
-                </div>
-              </div>
-              <span class="font-hkbold text-primary text-xl">$115.0</span>
-            </div>
-          </div>
-        </div>
-
-        <div
-          class="w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 relative group pb-12 lg:last:hidden xl:last:block"
-        >
-          <div class="sm:px-3 md:px-5">
-            <div class="relative rounded flex justify-center items-center">
-              <div
-                class="w-full h-68 bg-center bg-no-repeat bg-cover"
-                style="background-image: url(/assets/img/backpack-1.png)"
-              ></div>
-              <span
-                class="absolute top-0 right-0 bg-white px-5 py-1 mt-4 mr-4 rounded-full font-hkbold text-v-red text-sm uppercase tracking-wide"
-              >
-                Hot
-              </span>
-              <div
-                class="absolute inset-0 bg-secondary opacity-0 group-hover:opacity-85 pointer-events-none group-hover:pointer-events-auto transition-all overflow-hidden rounded"
-              ></div>
-              <div
-                class="absolute opacity-0 transition-opacity group-hover:opacity-100 flex justify-center items-center py-28 inset-0 group"
-              >
-                <a
-                  href="/cart"
-                  class="bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all mr-3"
-                >
-                  <img
-                    src="/assets/img/icons/icon-cart.svg "
-                    class="h-6 w-6"
-                    alt="icon cart"
-                  />
-                </a>
-                <a
-                  href="/product"
-                  class="bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all mr-3"
-                >
-                  <img
-                    src="/assets/img/icons/icon-search.svg"
-                    class="h-6 w-6"
-                    alt="icon search"
-                  />
-                </a>
-                <a
-                  href="/account/wishlist/"
-                  class="bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all"
-                >
-                  <img
-                    src="/assets/img/icons/icon-heart.svg"
-                    class="h-6 w-6"
-                    alt="icon heart"
-                  />
-                </a>
-              </div>
-            </div>
-            <div class="flex justify-between items-center pt-6">
-              <div>
-                <h3 class="font-hkregular text-base text-secondary">
-                  Cocktail Vans
-                </h3>
-                <div class="flex items-center">
-                  <div class="flex items-center">
-                    <i class="bx bxs-star text-primary"></i>
-                    <i class="bx bxs-star text-primary"></i>
-                    <i class="bx bxs-star text-primary"></i>
-                    <i class="bx bxs-star text-primary"></i>
-                    <i class="bx bxs-star text-primary"></i>
-                  </div>
-                  <p class="font-hkregular text-sm text-secondary ml-2">(45)</p>
-                </div>
-              </div>
-              <span class="font-hkbold text-primary text-xl">$33.0</span>
-            </div>
-          </div>
-        </div>
-
-        <div
-          class="w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 relative group pb-12 lg:last:hidden xl:last:block"
-        >
-          <div class="sm:px-3 md:px-5">
-            <div class="relative rounded flex justify-center items-center">
-              <div
-                class="w-full h-68 bg-center bg-no-repeat bg-cover"
-                style="background-image: url(/assets/img/backpack-1.png)"
-              ></div>
-              <span
-                class="absolute top-0 right-0 bg-white px-5 py-1 mt-4 mr-4 rounded-full font-hkbold text-v-green text-sm uppercase tracking-wide"
-              >
-                New
-              </span>
-              <div
-                class="absolute inset-0 bg-secondary opacity-0 group-hover:opacity-85 pointer-events-none group-hover:pointer-events-auto transition-all overflow-hidden rounded"
-              ></div>
-              <div
-                class="absolute opacity-0 transition-opacity group-hover:opacity-100 flex justify-center items-center py-28 inset-0 group"
-              >
-                <a
-                  href="/cart"
-                  class="bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all mr-3"
-                >
-                  <img
-                    src="/assets/img/icons/icon-cart.svg "
-                    class="h-6 w-6"
-                    alt="icon cart"
-                  />
-                </a>
-                <a
-                  href="/product"
-                  class="bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all mr-3"
-                >
-                  <img
-                    src="/assets/img/icons/icon-search.svg"
-                    class="h-6 w-6"
-                    alt="icon search"
-                  />
-                </a>
-                <a
-                  href="/account/wishlist/"
-                  class="bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all"
-                >
-                  <img
-                    src="/assets/img/icons/icon-heart.svg"
-                    class="h-6 w-6"
-                    alt="icon heart"
-                  />
-                </a>
-              </div>
-            </div>
-            <div class="flex justify-between items-center pt-6">
-              <div>
-                <h3 class="font-hkregular text-base text-secondary">WW Vans</h3>
-                <div class="flex items-center">
-                  <div class="flex items-center">
-                    <i class="bx bxs-star text-primary"></i>
-                    <i class="bx bxs-star text-primary"></i>
-                    <i class="bx bxs-star text-primary"></i>
-                    <i class="bx bxs-star text-primary"></i>
-                    <i class="bx bxs-star text-primary"></i>
-                  </div>
-                  <p class="font-hkregular text-sm text-secondary ml-2">(45)</p>
-                </div>
-              </div>
-              <span class="font-hkbold text-primary text-xl">$35.0</span>
-            </div>
-          </div>
-        </div>
-
-        <div
-          class="w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 relative group pb-12 lg:last:hidden xl:last:block"
-        >
-          <div class="sm:px-3 md:px-5">
-            <div class="relative rounded flex justify-center items-center">
-              <div
-                class="w-full h-68 bg-center bg-no-repeat bg-cover"
-                style="background-image: url(/assets/img/backpack-1.png)"
-              ></div>
-              <span
-                class="absolute top-0 right-0 bg-white px-5 py-1 mt-4 mr-4 rounded-full font-hkbold text-v-blue text-sm uppercase tracking-wide"
-              >
-                trend
-              </span>
-              <div
-                class="absolute inset-0 bg-secondary opacity-0 group-hover:opacity-85 pointer-events-none group-hover:pointer-events-auto transition-all overflow-hidden rounded"
-              ></div>
-              <div
-                class="absolute opacity-0 transition-opacity group-hover:opacity-100 flex justify-center items-center py-28 inset-0 group"
-              >
-                <a
-                  href="/cart"
-                  class="bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all mr-3"
-                >
-                  <img
-                    src="/assets/img/icons/icon-cart.svg "
-                    class="h-6 w-6"
-                    alt="icon cart"
-                  />
-                </a>
-                <a
-                  href="/product"
-                  class="bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all mr-3"
-                >
-                  <img
-                    src="/assets/img/icons/icon-search.svg"
-                    class="h-6 w-6"
-                    alt="icon search"
-                  />
-                </a>
-                <a
-                  href="/account/wishlist/"
-                  class="bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all"
-                >
-                  <img
-                    src="/assets/img/icons/icon-heart.svg"
-                    class="h-6 w-6"
-                    alt="icon heart"
-                  />
-                </a>
-              </div>
-            </div>
-            <div class="flex justify-between items-center pt-6">
-              <div>
-                <h3 class="font-hkregular text-base text-secondary">
-                  Classic Beige
-                </h3>
-                <div class="flex items-center">
-                  <div class="flex items-center">
-                    <i class="bx bxs-star text-primary"></i>
-                    <i class="bx bxs-star text-primary"></i>
-                    <i class="bx bxs-star text-primary"></i>
-                    <i class="bx bxs-star text-primary"></i>
-                    <i class="bx bxs-star text-primary"></i>
-                  </div>
-                  <p class="font-hkregular text-sm text-secondary ml-2">(45)</p>
-                </div>
-              </div>
-              <span class="font-hkbold text-primary text-xl">$30.0</span>
-            </div>
-          </div>
-        </div>
-
-        <div
-          class="w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 relative group pb-12 lg:last:hidden xl:last:block"
-        >
-          <div class="sm:px-3 md:px-5">
-            <div class="relative rounded flex justify-center items-center">
-              <div
-                class="w-full h-68 bg-center bg-no-repeat bg-cover"
-                style="background-image: url(/assets/img/backpack-1.png)"
-              ></div>
-              <span
-                class="absolute top-0 right-0 bg-white px-5 py-1 mt-4 mr-4 rounded-full font-hkbold text-primary-light text-sm uppercase tracking-wide"
-              >
-                25%
-              </span>
-              <div
-                class="absolute inset-0 bg-secondary opacity-0 group-hover:opacity-85 pointer-events-none group-hover:pointer-events-auto transition-all overflow-hidden rounded"
-              ></div>
-              <div
-                class="absolute opacity-0 transition-opacity group-hover:opacity-100 flex justify-center items-center py-28 inset-0 group"
-              >
-                <a
-                  href="/cart"
-                  class="bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all mr-3"
-                >
-                  <img
-                    src="/assets/img/icons/icon-cart.svg "
-                    class="h-6 w-6"
-                    alt="icon cart"
-                  />
-                </a>
-                <a
-                  href="/product"
-                  class="bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all mr-3"
-                >
-                  <img
-                    src="/assets/img/icons/icon-search.svg"
-                    class="h-6 w-6"
-                    alt="icon search"
-                  />
-                </a>
-                <a
-                  href="/account/wishlist/"
-                  class="bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all"
-                >
-                  <img
-                    src="/assets/img/icons/icon-heart.svg"
-                    class="h-6 w-6"
-                    alt="icon heart"
-                  />
-                </a>
-              </div>
-            </div>
-            <div class="flex justify-between items-center pt-6">
-              <div>
-                <h3 class="font-hkregular text-base text-secondary">
-                  Siberian Boots
-                </h3>
-                <div class="flex items-center">
-                  <div class="flex items-center">
-                    <i class="bx bxs-star text-primary"></i>
-                    <i class="bx bxs-star text-primary"></i>
-                    <i class="bx bxs-star text-primary"></i>
-                    <i class="bx bxs-star text-primary"></i>
-                    <i class="bx bxs-star text-primary"></i>
-                  </div>
-                  <p class="font-hkregular text-sm text-secondary ml-2">(45)</p>
-                </div>
-              </div>
-              <span class="font-hkbold text-primary text-xl">$67.0</span>
-            </div>
-          </div>
-        </div>
-
-        <div
-          class="w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 relative group pb-12 lg:last:hidden xl:last:block"
-        >
-          <div class="sm:px-3 md:px-5">
-            <div class="relative rounded flex justify-center items-center">
-              <div
-                class="w-full h-68 bg-center bg-no-repeat bg-cover"
-                style="background-image: url(/assets/img/backpack-1.png)"
-              ></div>
-              <span
-                class="absolute top-0 right-0 bg-white px-5 py-1 mt-4 mr-4 rounded-full font-hkbold text-v-red text-sm uppercase tracking-wide"
-              >
-                Hot
-              </span>
-              <div
-                class="absolute inset-0 bg-secondary opacity-0 group-hover:opacity-85 pointer-events-none group-hover:pointer-events-auto transition-all overflow-hidden rounded"
-              ></div>
-              <div
-                class="absolute opacity-0 transition-opacity group-hover:opacity-100 flex justify-center items-center py-28 inset-0 group"
-              >
-                <a
-                  href="/cart"
-                  class="bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all mr-3"
-                >
-                  <img
-                    src="/assets/img/icons/icon-cart.svg "
-                    class="h-6 w-6"
-                    alt="icon cart"
-                  />
-                </a>
-                <a
-                  href="/product"
-                  class="bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all mr-3"
-                >
-                  <img
-                    src="/assets/img/icons/icon-search.svg"
-                    class="h-6 w-6"
-                    alt="icon search"
-                  />
-                </a>
-                <a
-                  href="/account/wishlist/"
-                  class="bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all"
-                >
-                  <img
-                    src="/assets/img/icons/icon-heart.svg"
-                    class="h-6 w-6"
-                    alt="icon heart"
-                  />
-                </a>
-              </div>
-            </div>
-            <div class="flex justify-between items-center pt-6">
-              <div>
-                <h3 class="font-hkregular text-base text-secondary">
-                  Submarine Watch
-                </h3>
-                <div class="flex items-center">
-                  <div class="flex items-center">
-                    <i class="bx bxs-star text-primary"></i>
-                    <i class="bx bxs-star text-primary"></i>
-                    <i class="bx bxs-star text-primary"></i>
-                    <i class="bx bxs-star text-primary"></i>
-                    <i class="bx bxs-star text-primary"></i>
-                  </div>
-                  <p class="font-hkregular text-sm text-secondary ml-2">(45)</p>
-                </div>
-              </div>
-              <span class="font-hkbold text-primary text-xl">$120.0</span>
-            </div>
-          </div>
-        </div>
-
-        <div
-          class="w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 relative group pb-12 lg:last:hidden xl:last:block"
-        >
-          <div class="sm:px-3 md:px-5">
-            <div class="relative rounded flex justify-center items-center">
-              <div
-                class="w-full h-68 bg-center bg-no-repeat bg-cover"
-                style="background-image: url(/assets/img/backpack-1.png)"
-              ></div>
-              <span
-                class="absolute top-0 right-0 bg-white px-5 py-1 mt-4 mr-4 rounded-full font-hkbold text-v-green text-sm uppercase tracking-wide"
-              >
-                New
-              </span>
-              <div
-                class="absolute inset-0 bg-secondary opacity-0 group-hover:opacity-85 pointer-events-none group-hover:pointer-events-auto transition-all overflow-hidden rounded"
-              ></div>
-              <div
-                class="absolute opacity-0 transition-opacity group-hover:opacity-100 flex justify-center items-center py-28 inset-0 group"
-              >
-                <a
-                  href="/cart"
-                  class="bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all mr-3"
-                >
-                  <img
-                    src="/assets/img/icons/icon-cart.svg "
-                    class="h-6 w-6"
-                    alt="icon cart"
-                  />
-                </a>
-                <a
-                  href="/product"
-                  class="bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all mr-3"
-                >
-                  <img
-                    src="/assets/img/icons/icon-search.svg"
-                    class="h-6 w-6"
-                    alt="icon search"
-                  />
-                </a>
-                <a
-                  href="/account/wishlist/"
-                  class="bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all"
-                >
-                  <img
-                    src="/assets/img/icons/icon-heart.svg"
-                    class="h-6 w-6"
-                    alt="icon heart"
-                  />
-                </a>
-              </div>
-            </div>
-            <div class="flex justify-between items-center pt-6">
-              <div>
-                <h3 class="font-hkregular text-base text-secondary">
-                  Rose Gold Watch
-                </h3>
-                <div class="flex items-center">
-                  <div class="flex items-center">
-                    <i class="bx bxs-star text-primary"></i>
-                    <i class="bx bxs-star text-primary"></i>
-                    <i class="bx bxs-star text-primary"></i>
-                    <i class="bx bxs-star text-primary"></i>
-                    <i class="bx bxs-star text-primary"></i>
-                  </div>
-                  <p class="font-hkregular text-sm text-secondary ml-2">(45)</p>
-                </div>
-              </div>
-              <span class="font-hkbold text-primary text-xl">$135.0</span>
-            </div>
-          </div>
-        </div>
-
-        <div
-          class="w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 relative group pb-12 lg:last:hidden xl:last:block"
-        >
-          <div class="sm:px-3 md:px-5">
-            <div class="relative rounded flex justify-center items-center">
-              <div
-                class="w-full h-68 bg-center bg-no-repeat bg-cover"
-                style="background-image: url(/assets/img/backpack-1.png)"
-              ></div>
-              <span
-                class="absolute top-0 right-0 bg-white px-5 py-1 mt-4 mr-4 rounded-full font-hkbold text-v-blue text-sm uppercase tracking-wide"
-              >
-                Trend
-              </span>
-              <div
-                class="absolute inset-0 bg-secondary opacity-0 group-hover:opacity-85 pointer-events-none group-hover:pointer-events-auto transition-all overflow-hidden rounded"
-              ></div>
-              <div
-                class="absolute opacity-0 transition-opacity group-hover:opacity-100 flex justify-center items-center py-28 inset-0 group"
-              >
-                <a
-                  href="/cart"
-                  class="bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all mr-3"
-                >
-                  <img
-                    src="/assets/img/icons/icon-cart.svg "
-                    class="h-6 w-6"
-                    alt="icon cart"
-                  />
-                </a>
-                <a
-                  href="/product"
-                  class="bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all mr-3"
-                >
-                  <img
-                    src="/assets/img/icons/icon-search.svg"
-                    class="h-6 w-6"
-                    alt="icon search"
-                  />
-                </a>
-                <a
-                  href="/account/wishlist/"
-                  class="bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all"
-                >
-                  <img
-                    src="/assets/img/icons/icon-heart.svg"
-                    class="h-6 w-6"
-                    alt="icon heart"
-                  />
-                </a>
-              </div>
-            </div>
-            <div class="flex justify-between items-center pt-6">
-              <div>
-                <h3 class="font-hkregular text-base text-secondary">
-                  Silver One Watch
-                </h3>
-                <div class="flex items-center">
-                  <div class="flex items-center">
-                    <i class="bx bxs-star text-primary"></i>
-                    <i class="bx bxs-star text-primary"></i>
-                    <i class="bx bxs-star text-primary"></i>
-                    <i class="bx bxs-star text-primary"></i>
-                    <i class="bx bxs-star text-primary"></i>
-                  </div>
-                  <p class="font-hkregular text-sm text-secondary ml-2">(45)</p>
-                </div>
-              </div>
-              <span class="font-hkbold text-primary text-xl">$137.0</span>
-            </div>
-          </div>
-        </div>
-
-        <div
-          class="w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 relative group pb-12 lg:last:hidden xl:last:block"
-        >
-          <div class="sm:px-3 md:px-5">
-            <div class="relative rounded flex justify-center items-center">
-              <div
-                class="w-full h-68 bg-center bg-no-repeat bg-cover"
-                style="background-image: url(/assets/img/backpack-1.png)"
-              ></div>
-              <span
-                class="absolute top-0 right-0 bg-white px-5 py-1 mt-4 mr-4 rounded-full font-hkbold text-primary-light text-sm uppercase tracking-wide"
-              >
-                25%
-              </span>
-              <div
-                class="absolute inset-0 bg-secondary opacity-0 group-hover:opacity-85 pointer-events-none group-hover:pointer-events-auto transition-all overflow-hidden rounded"
-              ></div>
-              <div
-                class="absolute opacity-0 transition-opacity group-hover:opacity-100 flex justify-center items-center py-28 inset-0 group"
-              >
-                <a
-                  href="/cart"
-                  class="bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all mr-3"
-                >
-                  <img
-                    src="/assets/img/icons/icon-cart.svg "
-                    class="h-6 w-6"
-                    alt="icon cart"
-                  />
-                </a>
-                <a
-                  href="/product"
-                  class="bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all mr-3"
-                >
-                  <img
-                    src="/assets/img/icons/icon-search.svg"
-                    class="h-6 w-6"
-                    alt="icon search"
-                  />
-                </a>
-                <a
-                  href="/account/wishlist/"
-                  class="bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all"
-                >
-                  <img
-                    src="/assets/img/icons/icon-heart.svg"
-                    class="h-6 w-6"
-                    alt="icon heart"
-                  />
-                </a>
-              </div>
-            </div>
-            <div class="flex justify-between items-center pt-6">
-              <div>
-                <h3 class="font-hkregular text-base text-secondary">
-                  Princess
-                </h3>
-                <div class="flex items-center">
-                  <div class="flex items-center">
-                    <i class="bx bxs-star text-primary"></i>
-                    <i class="bx bxs-star text-primary"></i>
-                    <i class="bx bxs-star text-primary"></i>
-                    <i class="bx bxs-star text-primary"></i>
-                    <i class="bx bxs-star text-primary"></i>
-                  </div>
-                  <p class="font-hkregular text-sm text-secondary ml-2">(45)</p>
-                </div>
-              </div>
-              <span class="font-hkbold text-primary text-xl">$145.0</span>
-            </div>
-          </div>
-        </div>
-
-        <div
-          class="w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 relative group pb-12 lg:last:hidden xl:last:block"
-        >
-          <div class="sm:px-3 md:px-5">
-            <div class="relative rounded flex justify-center items-center">
-              <div
-                class="w-full h-68 bg-center bg-no-repeat bg-cover"
-                style="background-image: url(/assets/img/backpack-1.png)"
-              ></div>
-              <span
-                class="absolute top-0 right-0 bg-white px-5 py-1 mt-4 mr-4 rounded-full font-hkbold text-v-red text-sm uppercase tracking-wide"
-              >
-                Hot
-              </span>
-              <div
-                class="absolute inset-0 bg-secondary opacity-0 group-hover:opacity-85 pointer-events-none group-hover:pointer-events-auto transition-all overflow-hidden rounded"
-              ></div>
-              <div
-                class="absolute opacity-0 transition-opacity group-hover:opacity-100 flex justify-center items-center py-28 inset-0 group"
-              >
-                <a
-                  href="/cart"
-                  class="bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all mr-3"
-                >
-                  <img
-                    src="/assets/img/icons/icon-cart.svg "
-                    class="h-6 w-6"
-                    alt="icon cart"
-                  />
-                </a>
-                <a
-                  href="/product"
-                  class="bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all mr-3"
-                >
-                  <img
-                    src="/assets/img/icons/icon-search.svg"
-                    class="h-6 w-6"
-                    alt="icon search"
-                  />
-                </a>
-                <a
-                  href="/account/wishlist/"
-                  class="bg-white hover:bg-primary-light rounded-full px-3 py-3 flex items-center transition-all"
-                >
-                  <img
-                    src="/assets/img/icons/icon-heart.svg"
-                    class="h-6 w-6"
-                    alt="icon heart"
-                  />
-                </a>
-              </div>
-            </div>
-            <div class="flex justify-between items-center pt-6">
-              <div>
-                <h3 class="font-hkregular text-base text-secondary">
-                  Silver One for Men
-                </h3>
-                <div class="flex items-center">
-                  <div class="flex items-center">
-                    <i class="bx bxs-star text-primary"></i>
-                    <i class="bx bxs-star text-primary"></i>
-                    <i class="bx bxs-star text-primary"></i>
-                    <i class="bx bxs-star text-primary"></i>
-                    <i class="bx bxs-star text-primary"></i>
-                  </div>
-                  <p class="font-hkregular text-sm text-secondary ml-2">(45)</p>
-                </div>
-              </div>
-              <span class="font-hkbold text-primary text-xl">$140.0</span>
             </div>
           </div>
         </div>
       </div>
-      <!-- END LIST COLLECTIOn -->
+
+      <!-- END LIST COLLECTION -->
 
       <div class="pb-16 flex justify-center mx-auto">
         <span
@@ -1243,3 +240,13 @@
     <KeepInTouch />
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      filter: 'grid',
+    }
+  },
+}
+</script>

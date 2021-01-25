@@ -1,0 +1,11 @@
+input, textarea {
+  @apply font-hkregular text-secondary py-3 px-4 border border-grey-darker rounded w-full outline-none focus:shadow-outline focus:border-primary;
+}
+
+select {
+  @apply font-hkregular text-secondary-lighter py-2 px-4 border border-grey-darker rounded w-full outline-none focus:shadow-outline focus:border-primary;
+}
+
+input[type="checkbox"], input[type="radio"] {
+  @apply border border-grey-darker focus:shadow-outline;
+}

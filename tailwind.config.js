@@ -1,13 +1,19 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
-  purge: [
-    './components/**/*.{vue,js}',
-    './layouts/**/*.vue',
-    './pages/**/*.vue',
-    './plugins/**/*.{js,ts}',
-    './nuxt.config.{js,ts}',
-  ],
+  purge: {
+    content: [
+      './components/**/*.{vue,js}',
+      './layouts/**/*.vue',
+      './pages/**/*.vue',
+      './plugins/**/*.{js,ts}',
+      './nuxt.config.{js,ts}',
+    ],
+    options: {
+      whitelist: ['xl:w-auto', 'active'],
+      whitelistPatternsChildren: [/glide/],
+    },
+  },
   theme: {
     fontFamily: {
       hkbold: ['hk_groteskbold', 'sans-serif'],
@@ -69,47 +75,6 @@ module.exports = {
     linearGradientColors: {
       team: [' #2d1b15 10%', 'rgba(0, 0, 0, 0) 70%'],
     },
-
-    customForms: theme => ({
-      default: {
-        'input, textarea': {
-          fontFamily: theme('fontFamily.hkregular').join(', '),
-          color: theme('colors.secondary'),
-          padding: `${theme('spacing.3')} ${theme('spacing.5')}`,
-          borderColor: theme('colors.grey-darker'),
-          borderRadius: theme('borderRadius.default'),
-          width: theme('width.full'),
-          outline: theme('outline'),
-          '&:focus': {
-            boxShadow: theme('boxShadow.outline'),
-            borderColor: theme('colors.primary'),
-          },
-        },
-        'multiselect, select': {
-          fontFamily: theme('fontFamily.hkregular').join(', '),
-          color: theme('colors.secondary-lighter'),
-          padding: `${theme('spacing.2')} ${theme('spacing.4')}`,
-          borderColor: theme('colors.grey-darker'),
-          borderRadius: theme('borderRadius.default'),
-          width: theme('width.full'),
-          outline: theme('outline'),
-          iconColor: theme('colors.primary'),
-          '&:focus': {
-            boxShadow: theme('boxShadow.outline'),
-            borderColor: theme('colors.primary'),
-          },
-        },
-        'checkbox, radio': {
-          borderColor: theme('colors.grey-darker'),
-          '&:checked': {
-            backgroundColor: theme('backgroundColor.primary'),
-          },
-          '&:focus': {
-            boxShadow: theme('boxShadow.outline'),
-          },
-        },
-      },
-    }),
 
     extend: {
       spacing: {
@@ -174,6 +139,7 @@ module.exports = {
         0: '0',
         infinite: '999px',
       },
+
       zIndex: {
         '-1': '-1',
       },
@@ -184,8 +150,11 @@ module.exports = {
         square: 'square',
         roman: 'upper-roman',
       },
+
+      backgroundColor: ['checked'],
+      borderColor: ['checked'],
     },
   },
-  variants: ['responsive', 'group-hover', 'hover', 'focus', 'last'],
-  plugins: [],
+  variants: ['responsive', 'group-hover', 'hover', 'focus', 'last', 'checked'],
+  plugins: [require('tailwindcss-gradients')],
 }

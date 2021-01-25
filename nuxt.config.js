@@ -1,4 +1,4 @@
-require('events').EventEmitter.defaultMaxListeners = 10
+require('events').EventEmitter.defaultMaxListeners = 15
 export default {
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
@@ -71,7 +71,11 @@ export default {
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
-  css: [],
+  css: [
+    'node_modules/@glidejs/glide/dist/css/glide.core.min.css',
+    'node_modules/@glidejs/glide/dist/css/glide.theme.min.css',
+    '~/assets/sass/app.scss',
+  ],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [],

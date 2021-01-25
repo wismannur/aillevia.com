@@ -137,7 +137,7 @@
                   ></i>
                 </div>
                 <div
-                  class="pt-10 absolute mt-10 top-0 left-0 right-0 z-50 w-2/3 mx-auto opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto"
+                  class="pt-10 absolute mt-10 top-0 left-0 right-0 z-50 w-3/5 mx-auto opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto"
                 >
                   <div
                     class="transition-all flex bg-white shadow-lg p-8 rounded-b relative"
@@ -149,7 +149,7 @@
                       <ul>
                         <li>
                           <a
-                            href="/collection-grid"
+                            href="/collections"
                             class="text-sm font-hk text-secondary-lighter leading-loose border-b border-transparent hover:border-secondary-lighter"
                             >Boots</a
                           >
@@ -157,7 +157,7 @@
 
                         <li>
                           <a
-                            href="/collection-grid"
+                            href="/collections"
                             class="text-sm font-hk text-secondary-lighter leading-loose border-b border-transparent hover:border-secondary-lighter"
                             >Blutcher Boot</a
                           >
@@ -165,7 +165,7 @@
 
                         <li>
                           <a
-                            href="/collection-grid"
+                            href="/collections"
                             class="text-sm font-hk text-secondary-lighter leading-loose border-b border-transparent hover:border-secondary-lighter"
                             >Chelsea Boot</a
                           >
@@ -173,7 +173,7 @@
 
                         <li>
                           <a
-                            href="/collection-grid"
+                            href="/collections"
                             class="text-sm font-hk text-secondary-lighter leading-loose border-b border-transparent hover:border-secondary-lighter"
                             >Chukka Boot</a
                           >
@@ -181,7 +181,7 @@
 
                         <li>
                           <a
-                            href="/collection-grid"
+                            href="/collections"
                             class="text-sm font-hk text-secondary-lighter leading-loose border-b border-transparent hover:border-secondary-lighter"
                             >Dress Boot</a
                           >
@@ -189,7 +189,7 @@
 
                         <li>
                           <a
-                            href="/collection-grid"
+                            href="/collections"
                             class="text-sm font-hk text-secondary-lighter leading-loose border-b border-transparent hover:border-secondary-lighter"
                             >Work Boot</a
                           >
@@ -204,7 +204,7 @@
                       <ul>
                         <li>
                           <a
-                            href="/collection-grid"
+                            href="/collections"
                             class="text-sm font-hk text-secondary-lighter leading-loose border-b border-transparent hover:border-secondary-lighter"
                             >Accessories</a
                           >
@@ -212,7 +212,7 @@
 
                         <li>
                           <a
-                            href="/collection-grid"
+                            href="/collections"
                             class="text-sm font-hk text-secondary-lighter leading-loose border-b border-transparent hover:border-secondary-lighter"
                             >Belts</a
                           >
@@ -220,7 +220,7 @@
 
                         <li>
                           <a
-                            href="/collection-grid"
+                            href="/collections"
                             class="text-sm font-hk text-secondary-lighter leading-loose border-b border-transparent hover:border-secondary-lighter"
                             >Caps</a
                           >
@@ -228,7 +228,7 @@
 
                         <li>
                           <a
-                            href="/collection-grid"
+                            href="/collections"
                             class="text-sm font-hk text-secondary-lighter leading-loose border-b border-transparent hover:border-secondary-lighter"
                             >Laces</a
                           >
@@ -236,7 +236,7 @@
 
                         <li>
                           <a
-                            href="/collection-grid"
+                            href="/collections"
                             class="text-sm font-hk text-secondary-lighter leading-loose border-b border-transparent hover:border-secondary-lighter"
                             >Socks</a
                           >
@@ -251,7 +251,7 @@
                       <ul>
                         <li>
                           <a
-                            href="/collection-grid"
+                            href="/collections"
                             class="text-sm font-hk text-secondary-lighter leading-loose border-b border-transparent hover:border-secondary-lighter"
                             >Shoes</a
                           >
@@ -259,7 +259,7 @@
 
                         <li>
                           <a
-                            href="/collection-grid"
+                            href="/collections"
                             class="text-sm font-hk text-secondary-lighter leading-loose border-b border-transparent hover:border-secondary-lighter"
                             >Derby Shoes</a
                           >
@@ -267,7 +267,7 @@
 
                         <li>
                           <a
-                            href="/collection-grid"
+                            href="/collections"
                             class="text-sm font-hk text-secondary-lighter leading-loose border-b border-transparent hover:border-secondary-lighter"
                             >Belts</a
                           >
@@ -275,7 +275,7 @@
 
                         <li>
                           <a
-                            href="/collection-grid"
+                            href="/collections"
                             class="text-sm font-hk text-secondary-lighter leading-loose border-b border-transparent hover:border-secondary-lighter"
                             >Caps</a
                           >
@@ -283,7 +283,7 @@
 
                         <li>
                           <a
-                            href="/collection-grid"
+                            href="/collections"
                             class="text-sm font-hk text-secondary-lighter leading-loose border-b border-transparent hover:border-secondary-lighter"
                             >Laces</a
                           >
@@ -291,7 +291,7 @@
 
                         <li>
                           <a
-                            href="/collection-grid"
+                            href="/collections"
                             class="text-sm font-hk text-secondary-lighter leading-loose border-b border-transparent hover:border-secondary-lighter"
                             >Socks</a
                           >
@@ -299,7 +299,7 @@
                       </ul>
                     </div>
 
-                    <div class="flex-1">
+                    <!-- <div class="flex-1">
                       <div
                         class="z-0 bg-contain bg-right-bottom bg-no-repeat absolute inset-0"
                         :style="{
@@ -307,7 +307,7 @@
                             'url(/assets/img/bg-mega-menu.png)',
                         }"
                       ></div>
-                    </div>
+                    </div> -->
                   </div>
                 </div>
               </li>
@@ -387,7 +387,7 @@
                     <ul>
                       <li>
                         <a
-                          href="/collection-grid"
+                          href="/collections"
                           class="text-sm font-hk text-secondary-lighter leading-loose border-b border-transparent hover:border-secondary-lighter"
                           >Boots</a
                         >
@@ -395,7 +395,7 @@
 
                       <li>
                         <a
-                          href="/collection-grid"
+                          href="/collections"
                           class="text-sm font-hk text-secondary-lighter leading-loose border-b border-transparent hover:border-secondary-lighter"
                           >Blutcher Boot</a
                         >
@@ -403,7 +403,7 @@
 
                       <li>
                         <a
-                          href="/collection-grid"
+                          href="/collections"
                           class="text-sm font-hk text-secondary-lighter leading-loose border-b border-transparent hover:border-secondary-lighter"
                           >Chelsea Boot</a
                         >
@@ -411,7 +411,7 @@
 
                       <li>
                         <a
-                          href="/collection-grid"
+                          href="/collections"
                           class="text-sm font-hk text-secondary-lighter leading-loose border-b border-transparent hover:border-secondary-lighter"
                           >Chukka Boot</a
                         >
@@ -419,7 +419,7 @@
 
                       <li>
                         <a
-                          href="/collection-grid"
+                          href="/collections"
                           class="text-sm font-hk text-secondary-lighter leading-loose border-b border-transparent hover:border-secondary-lighter"
                           >Dress Boot</a
                         >
@@ -427,7 +427,7 @@
 
                       <li>
                         <a
-                          href="/collection-grid"
+                          href="/collections"
                           class="text-sm font-hk text-secondary-lighter leading-loose border-b border-transparent hover:border-secondary-lighter"
                           >Work Boot</a
                         >
@@ -442,7 +442,7 @@
                     <ul>
                       <li>
                         <a
-                          href="/collection-grid"
+                          href="/collections"
                           class="text-sm font-hk text-secondary-lighter leading-loose border-b border-transparent hover:border-secondary-lighter"
                           >Accessories</a
                         >
@@ -450,7 +450,7 @@
 
                       <li>
                         <a
-                          href="/collection-grid"
+                          href="/collections"
                           class="text-sm font-hk text-secondary-lighter leading-loose border-b border-transparent hover:border-secondary-lighter"
                           >Belts</a
                         >
@@ -458,7 +458,7 @@
 
                       <li>
                         <a
-                          href="/collection-grid"
+                          href="/collections"
                           class="text-sm font-hk text-secondary-lighter leading-loose border-b border-transparent hover:border-secondary-lighter"
                           >Caps</a
                         >
@@ -466,7 +466,7 @@
 
                       <li>
                         <a
-                          href="/collection-grid"
+                          href="/collections"
                           class="text-sm font-hk text-secondary-lighter leading-loose border-b border-transparent hover:border-secondary-lighter"
                           >Laces</a
                         >
@@ -474,7 +474,7 @@
 
                       <li>
                         <a
-                          href="/collection-grid"
+                          href="/collections"
                           class="text-sm font-hk text-secondary-lighter leading-loose border-b border-transparent hover:border-secondary-lighter"
                           >Socks</a
                         >
@@ -489,7 +489,7 @@
                     <ul>
                       <li>
                         <a
-                          href="/collection-grid"
+                          href="/collections"
                           class="text-sm font-hk text-secondary-lighter leading-loose border-b border-transparent hover:border-secondary-lighter"
                           >Shoes</a
                         >
@@ -497,7 +497,7 @@
 
                       <li>
                         <a
-                          href="/collection-grid"
+                          href="/collections"
                           class="text-sm font-hk text-secondary-lighter leading-loose border-b border-transparent hover:border-secondary-lighter"
                           >Derby Shoes</a
                         >
@@ -505,7 +505,7 @@
 
                       <li>
                         <a
-                          href="/collection-grid"
+                          href="/collections"
                           class="text-sm font-hk text-secondary-lighter leading-loose border-b border-transparent hover:border-secondary-lighter"
                           >Belts</a
                         >
@@ -513,7 +513,7 @@
 
                       <li>
                         <a
-                          href="/collection-grid"
+                          href="/collections"
                           class="text-sm font-hk text-secondary-lighter leading-loose border-b border-transparent hover:border-secondary-lighter"
                           >Caps</a
                         >
@@ -521,7 +521,7 @@
 
                       <li>
                         <a
-                          href="/collection-grid"
+                          href="/collections"
                           class="text-sm font-hk text-secondary-lighter leading-loose border-b border-transparent hover:border-secondary-lighter"
                           >Laces</a
                         >
@@ -529,7 +529,7 @@
 
                       <li>
                         <a
-                          href="/collection-grid"
+                          href="/collections"
                           class="text-sm font-hk text-secondary-lighter leading-loose border-b border-transparent hover:border-secondary-lighter"
                           >Socks</a
                         >
@@ -645,7 +645,7 @@
                   "
                 ></i>
                 <a
-                  href="/collection-grid.html"
+                  href="/collections.html"
                   class="font-hk font-medium transition-colors"
                   :class="
                     isAccordionOpen ? 'text-primary' : 'text-grey-darkest'
@@ -660,22 +660,22 @@
                 "
               >
                 <a
-                  href="/collection-grid"
+                  href="/collections"
                   class="font-hk font-medium text-secondary block mt-2"
                   >T-Shirts</a
                 >
                 <a
-                  href="/collection-grid"
+                  href="/collections"
                   class="font-hk font-medium text-secondary block mt-2"
                   >Shirts</a
                 >
                 <a
-                  href="/collection-grid"
+                  href="/collections"
                   class="font-hk font-medium text-secondary block mt-2"
                   >Men’s Bags</a
                 >
                 <a
-                  href="/collection-grid"
+                  href="/collections"
                   class="font-hk font-medium text-secondary block mt-2"
                   >Travel Essentials</a
                 >
@@ -684,7 +684,7 @@
             <div class="flex items-center pt-3">
               <i class="bx bx-chevron-right text-grey-darkest text-xl pr-3"></i>
               <a
-                href="/collection-grid"
+                href="/collections"
                 class="font-hk font-medium text-grey-darkest"
                 >Women's Fashion</a
               >
@@ -692,7 +692,7 @@
             <div class="flex items-center pt-3">
               <i class="bx bx-chevron-right text-grey-darkest text-xl pr-3"></i>
               <a
-                href="/collection-grid"
+                href="/collections"
                 class="font-hk font-medium text-grey-darkest"
                 >Baggage</a
               >
@@ -700,7 +700,7 @@
             <div class="flex items-center pt-3">
               <i class="bx bx-chevron-right text-grey-darkest text-xl pr-3"></i>
               <a
-                href="/collection-grid"
+                href="/collections"
                 class="font-hk font-medium text-grey-darkest"
                 >Camp</a
               >
@@ -708,7 +708,7 @@
             <div class="flex items-center pt-3">
               <i class="bx bx-chevron-right text-grey-darkest text-xl pr-3"></i>
               <a
-                href="/collection-grid"
+                href="/collections"
                 class="font-hk font-medium text-grey-darkest"
                 >Personal Care</a
               >
@@ -716,7 +716,7 @@
             <div class="flex items-center pt-3">
               <i class="bx bx-chevron-right text-grey-darkest text-xl pr-3"></i>
               <a
-                href="/collection-grid"
+                href="/collections"
                 class="font-hk font-medium text-grey-darkest"
                 >Backpacks</a
               >
@@ -724,7 +724,7 @@
             <div class="flex items-center pt-3">
               <i class="bx bx-chevron-right text-grey-darkest text-xl pr-3"></i>
               <a
-                href="/collection-grid"
+                href="/collections"
                 class="font-hk font-medium text-grey-darkest"
                 >Pullovers</a
               >

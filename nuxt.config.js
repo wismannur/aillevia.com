@@ -62,6 +62,19 @@ export default {
         rel: 'preconnect',
         href: 'https://www.google-analytics.com',
       },
+      {
+        rel: 'stylesheet',
+        href:
+          'https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css',
+        integrity: 'sha256-imWjOiEEAcjWdL1+inhBu1dWYFyXuiO9vpJVEQd3y/c=',
+        crossorigin: 'anonymous',
+      },
+      {
+        rel: 'stylesheet',
+        href: '/assets/styles/fonts.css',
+        media: 'screen',
+        crossorigin: 'anonymous',
+      },
     ],
     bodyAttrs: {
       class: [

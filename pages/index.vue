@@ -146,75 +146,9 @@
           </div>
         </div>
 
-        <div class="flex flex-col md:flex-row py-20 md:py-24">
-          <div
-            class="sm:w-1/2 md:w-2/5 lg:w-1/3 mx-auto lg:mx-0 flex md:flex-col lg:flex-row items-center justify-center md:text-center lg:text-left md:border-r-2 last:border-r-0 md:border-primary-lighter pb-3 md:pb-0"
-          >
-            <div>
-              <img
-                src="/assets/img/icons/icon-shipping.svg"
-                class="w-auto h-12"
-                alt="icon"
-              />
-            </div>
-            <div class="ml-6 mt-3 lg:mt-0">
-              <h3 class="font-hksemibold text-primary text-xl tracking-wide">
-                Free shipping
-              </h3>
-              <p
-                class="font-hkregular text-secondary-lighter text-base tracking-wide"
-              >
-                On all orders over $30
-              </p>
-            </div>
-          </div>
+        <!-- Free Shipping -->
 
-          <div
-            class="sm:w-1/2 md:w-2/5 lg:w-1/3 mx-auto lg:mx-0 flex md:flex-col lg:flex-row items-center justify-center md:text-center lg:text-left md:border-r-2 last:border-r-0 md:border-primary-lighter pb-3 md:pb-0"
-          >
-            <div>
-              <img
-                src="/assets/img/icons/icon-support.svg"
-                class="w-auto h-12"
-                alt="icon"
-              />
-            </div>
-            <div class="ml-6 mt-3 lg:mt-0">
-              <h3 class="font-hksemibold text-primary text-xl tracking-wide">
-                Always available
-              </h3>
-              <p
-                class="font-hkregular text-secondary-lighter text-base tracking-wide"
-              >
-                24/7 call center available
-              </p>
-            </div>
-          </div>
-
-          <div
-            class="sm:w-1/2 md:w-2/5 lg:w-1/3 mx-auto lg:mx-0 flex md:flex-col lg:flex-row items-center justify-center md:text-center lg:text-left md:border-r-2 last:border-r-0 md:border-primary-lighter pb-3 md:pb-0"
-          >
-            <div>
-              <img
-                src="/assets/img/icons/icon-return.svg"
-                class="w-auto h-12"
-                alt="icon"
-              />
-            </div>
-            <div class="ml-6 mt-3 lg:mt-0">
-              <h3 class="font-hksemibold text-primary text-xl tracking-wide">
-                Free returns
-              </h3>
-              <p
-                class="font-hkregular text-secondary-lighter text-base tracking-wide"
-              >
-                30 days free return policy
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="pb-20 md:pb-24 lg:pb-32 flex flex-wrap justify-between">
+        <div class="py-20 md:py-24 lg:pb-32 flex flex-wrap justify-between">
           <div class="lg:w-1/2 px-10 mx-auto lg:mx-0 text-center lg:text-left">
             <div class="lg:w-3/4 xl:w-2/3 lg:pt-10 pb-4 md:pb-10">
               <h1
@@ -342,50 +276,7 @@
         </div>
       </div>
 
-      <div class="container mb-28">
-        <div
-          class="bg-center bg-no-repeat bg-cover"
-          style="background-image: url(/assets/img/bg-cta.png)"
-        >
-          <div class="py-16 md:py-20 text-center">
-            <h3
-              class="font-butlerregular text-white text-3xl sm:text-4xl tracking-wide"
-            >
-              Let's keep in touch
-            </h3>
-            <p
-              class="font-hkregular font-bold text-white text-lg sm:text-xl pt-3 px-6"
-            >
-              Join our list and save 15% off your first order.
-            </p>
-            <form class="pt-10 sm:pt-12">
-              <div
-                class="w-5/6 sm:w-3/4 lg:w-3/5 xl:w-1/2 mx-auto flex flex-col sm:flex-row justify-center items-center"
-              >
-                <label
-                  for="cta_email"
-                  class="block relative h-0 w-0 overflow-hidden"
-                  >Email</label
-                >
-                <input
-                  id="cta_email"
-                  type="email"
-                  name="cta_email"
-                  placeholder="ENTER YOUR EMAIL"
-                  class="form-input bg-transparent text-sm text-white border-white"
-                />
-                <button
-                  type="button"
-                  class="button bg-primary sm:ml-5 mt-4 sm:mt-0 w-full sm:w-auto text-white"
-                  aria-label="Subscribe button"
-                >
-                  SUBSCRIBE
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
+      <KeepInTouch />
     </div>
     <div>
       <!-- <h1 class="title">Aillevia.com</h1> -->

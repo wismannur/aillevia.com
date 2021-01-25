@@ -11,7 +11,7 @@
                   style="background-image: url(/assets/img/hero-slide-01.jpg)"
                 >
                   <div
-                    class="py-48 px-6 sm:px-10 md:px-12 xl:px-24 text-center sm:text-left sm:w-5/6 lg:w-3/4 xl:w-2/3"
+                    class="py-48 px-6 sm:px-10 md:px-12 xl:px-24 text-center sm:text-left sm:w-5/6 lg:w-3/4 xl:w-2/3 flex flex-col items-center md:items-start"
                   >
                     <h3
                       class="font-butlermedium text-secondary text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
@@ -20,8 +20,8 @@
                     </h3>
                     <a
                       href="/collection-grid"
-                      class="btn btn-primary btn-lg mt-8"
-                      >Know more</a
+                      class="button button-primary bg-primary text-white mt-6 w-40"
+                      >Know More</a
                     >
                   </div>
                 </div>
@@ -33,7 +33,7 @@
                   style="background-image: url(/assets/img/hero-slide-02.jpg)"
                 >
                   <div
-                    class="py-48 px-6 sm:px-10 md:px-12 xl:px-24 text-center sm:text-left sm:w-5/6 lg:w-3/4 xl:w-2/3"
+                    class="py-48 px-6 sm:px-10 md:px-12 xl:px-24 text-center sm:text-left sm:w-5/6 lg:w-3/4 xl:w-2/3 flex flex-col items-center md:items-start"
                   >
                     <h3
                       class="font-butlermedium text-secondary text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
@@ -43,8 +43,8 @@
                     </h3>
                     <a
                       href="/collection-grid"
-                      class="btn btn-primary btn-lg mt-8"
-                      >Know more</a
+                      class="button button-primary bg-primary text-white mt-6 w-40"
+                      >Know More</a
                     >
                   </div>
                 </div>
@@ -56,7 +56,7 @@
                   style="background-image: url(/assets/img/hero-slide-03.jpg)"
                 >
                   <div
-                    class="py-48 px-6 sm:px-10 md:px-12 xl:px-24 text-center sm:text-left sm:w-5/6 lg:w-3/4 xl:w-2/3"
+                    class="py-48 px-6 sm:px-10 md:px-12 xl:px-24 text-center sm:text-left sm:w-5/6 lg:w-3/4 xl:w-2/3 flex flex-col items-center md:items-start"
                   >
                     <h3
                       class="font-butlermedium text-secondary text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
@@ -66,8 +66,8 @@
                     </h3>
                     <a
                       href="/collection-grid"
-                      class="btn btn-primary btn-lg mt-8"
-                      >Know more</a
+                      class="button button-primary bg-primary text-white mt-6 w-40"
+                      >Know More</a
                     >
                   </div>
                 </div>
@@ -79,7 +79,7 @@
                   style="background-image: url(/assets/img/hero-slide-04.jpg)"
                 >
                   <div
-                    class="py-48 px-6 sm:px-10 md:px-12 xl:px-24 text-center sm:text-left sm:w-5/6 lg:w-3/4 xl:w-2/3"
+                    class="py-48 px-6 sm:px-10 md:px-12 xl:px-24 text-center sm:text-left sm:w-5/6 lg:w-3/4 xl:w-2/3 flex flex-col items-center md:items-start"
                   >
                     <h3
                       class="font-butlermedium text-secondary text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
@@ -88,8 +88,8 @@
                     </h3>
                     <a
                       href="/collection-grid"
-                      class="btn btn-primary btn-lg mt-8"
-                      >Know more</a
+                      class="button button-primary bg-primary text-white mt-6 w-40"
+                      >Know More</a
                     >
                   </div>
                 </div>
@@ -101,7 +101,7 @@
                   style="background-image: url(/assets/img/hero-slide-05.jpg)"
                 >
                   <div
-                    class="py-48 px-6 sm:px-10 md:px-12 xl:px-24 text-center sm:text-left sm:w-5/6 lg:w-3/4 xl:w-2/3"
+                    class="py-48 px-6 sm:px-10 md:px-12 xl:px-24 text-center sm:text-left sm:w-5/6 lg:w-3/4 xl:w-2/3 flex flex-col items-center md:items-start"
                   >
                     <h3
                       class="font-butlermedium text-secondary text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
@@ -111,8 +111,8 @@
                     </h3>
                     <a
                       href="/collection-grid"
-                      class="btn btn-primary btn-lg mt-8"
-                      >Know more</a
+                      class="button button-primary bg-primary text-white mt-6 w-40"
+                      >Know More</a
                     >
                   </div>
                 </div>
@@ -318,6 +318,7 @@ export default {
   },
   mounted() {
     new Glide('.hero-slider', { autoplay: 3000, type: 'carousel' }).mount()
+    // new Glide('.hero-slider', { type: 'carousel' }).mount()
     this.collectionSliders()
     this.productSlider()
     this.postSlider()

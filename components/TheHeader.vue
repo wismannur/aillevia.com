@@ -54,8 +54,8 @@
               alt="logo"
             /> -->
           </a>
-          <!-- <div class="flex items-center">
-            <a
+          <div class="flex items-center">
+            <!-- <a
               href="/account/dashboard"
               class="border-2 transition-all border-transparent hover:border-primary rounded-full p-2 sm:p-4 group"
             >
@@ -85,11 +85,14 @@
                 class="w-5 sm:w-6 md:w-8 h-5 sm:h-6 md:h-8 hidden group-hover:block"
                 alt="icon cart hover"
               />
-            </a>
+            </a> -->
 
             <span
               class="block lg:hidden border-2 transition-all border-transparent hover:border-primary rounded-full p-2 sm:p-4 ml-2 sm:ml-3 md:ml-5 lg:ml-8 group"
-              @click="mobileCart = !mobileCart"
+              @click="
+                mobileCart = !mobileCart
+                setHeaderTopFixedCart()
+              "
             >
               <img
                 src="https://d33wubrfki0l68.cloudfront.net/16f4de05841e1eea2fbe536d4053b73f0ad85baf/77013/assets/img/icons/icon-cart.svg"
@@ -102,7 +105,7 @@
                 alt="icon cart hover"
               />
             </span>
-          </div> -->
+          </div>
           <div class="justify-center hidden lg:flex">
             <ul class="list-reset flex items-center">
               <li class="mr-10">
@@ -574,7 +577,7 @@
       </div>
     </div>
     <div
-      class="fixed inset-x-0 pt-20 md:top-28 z-50 transition-all lg:hidden"
+      class="fixed inset-x-0 pt-20 md:top-28 z-50 transition-all lg:hidden overflow-y-auto h-full"
       :class="
         mobileMenu
           ? 'opacity-100 pointer-events-auto'
@@ -582,7 +585,7 @@
       "
     >
       <div
-        class="w-full sm:w-1/2 absolute left-0 top-0 px-6 z-40 bg-white shadow-sm"
+        class="w-full pb-20 sm:w-1/2 absolute left-0 top-0 px-6 z-40 bg-white shadow-sm"
       >
         <a
           href="/"
@@ -743,14 +746,13 @@
           class="w-full py-3 cursor-pointer font-hk font-medium text-secondary border-b border-grey-dark block"
           >Contact
         </a>
-        <div class="my-8">
+        <div class="mt-5 mb-8 h-auto flex flex-col">
           <a
             href="/login"
-            class="btn btn-primary w-full mb-4"
             aria-label="Login button"
+            class="button button-primary bg-primary text-white w-full mb-4"
             >Login Account</a
           >
-
           <a
             href="/register"
             class="font-hk text-secondary md:text-lg pl-3 underline text-center block"
@@ -788,7 +790,7 @@
       </div>
     </div>
     <div
-      class="absolute inset-x-0 z-50"
+      class="absolute inset-x-0 z-50 transition-all h-full overflow-y-auto"
       :class="
         mobileCart
           ? 'opacity-100 pointer-events-auto'
@@ -796,7 +798,7 @@
       "
     >
       <div
-        class="w-full sm:w-1/2 absolute right-0 top-0 px-6 py-6 z-10 bg-white shadow-sm rounded"
+        class="w-full sm:w-1/2 absolute right-0 top-0 px-6 pt-6 pb-40 z-10 bg-white shadow-sm rounded"
       >
         <div
           class="flex justify-between items-center border-b border-grey-dark pb-2"
@@ -810,9 +812,7 @@
             >
               <div
                 class="w-16 h-16 mx-auto bg-center bg-no-repeat bg-cover"
-                style="
-                  background-image: url(/assets/img/unlicensed/backpack-1.png);
-                "
+                style="background-image: url(/assets/img/backpack-1.png)"
               ></div>
             </div>
             <div class="pl-2">
@@ -846,9 +846,7 @@
             >
               <div
                 class="w-16 h-16 mx-auto bg-center bg-no-repeat bg-cover"
-                style="
-                  background-image: url(/assets/img/unlicensed/backpack-1.png);
-                "
+                style="background-image: url(/assets/img/backpack-1.png)"
               ></div>
             </div>
             <div class="pl-2">
@@ -876,8 +874,8 @@
         </div>
         <button
           type="submit"
-          class="btn btn-primary w-full mt-5"
-          aria-label="Login button"
+          class="button button-primary bg-primary text-white w-full mt-5"
+          aria-label="Checkout button"
         >
           Checkout
         </button>
@@ -908,6 +906,11 @@ export default {
   methods: {
     setHeaderTopFixed() {
       this.mobileMenu
+        ? this.setHeaderTopFixedAdd()
+        : this.setHeaderTopFixedRemove()
+    },
+    setHeaderTopFixedCart() {
+      this.mobileCart
         ? this.setHeaderTopFixedAdd()
         : this.setHeaderTopFixedRemove()
     },

@@ -9,3 +9,10 @@ select {
 input[type="checkbox"], input[type="radio"] {
   @apply border border-grey-darker focus:shadow-outline;
 }
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1536px;
+  @apply px-2 sm:px-0;
+}

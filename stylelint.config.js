@@ -24,6 +24,7 @@ module.exports = {
           'mixin',
           'include',
           'extend',
+          'for',
         ],
       },
     ],

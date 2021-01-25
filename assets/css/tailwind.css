@@ -24,10 +24,10 @@ purgecss end ignore */
 
 /* purgecss end ignore */
 
-.container {
+/* .container {
   margin-right: auto;
   margin-left: auto;
-}
+} */
 
 .group:hover .group-hover\:pointer-events-none {
   pointer-events: none;

@@ -46,7 +46,7 @@
               />
             </a> -->
           </div>
-          <a href="/">
+          <a class="text-base font-large text-lg px-3" href="/">
             AILLEVIA
             <!-- <img
               src="https://d33wubrfki0l68.cloudfront.net/23b5f665f19d2465fb9751d325b522bda9614e53/c3543/assets/img/logo-aillevia.svg"

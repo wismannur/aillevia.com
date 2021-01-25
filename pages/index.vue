@@ -11,7 +11,7 @@
                   style="background-image: url(/assets/img/hero-slide-01.jpg)"
                 >
                   <div
-                    class="py-36 px-5 sm:px-10 md:px-12 xl:px-24 text-center sm:text-left sm:w-5/6 lg:w-3/4 xl:w-2/3"
+                    class="py-48 px-6 sm:px-10 md:px-12 xl:px-24 text-center sm:text-left sm:w-5/6 lg:w-3/4 xl:w-2/3"
                   >
                     <h3
                       class="font-butlermedium text-secondary text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
@@ -33,7 +33,7 @@
                   style="background-image: url(/assets/img/hero-slide-02.jpg)"
                 >
                   <div
-                    class="py-36 px-5 sm:px-10 md:px-12 xl:px-24 text-center sm:text-left sm:w-5/6 lg:w-3/4 xl:w-2/3"
+                    class="py-48 px-6 sm:px-10 md:px-12 xl:px-24 text-center sm:text-left sm:w-5/6 lg:w-3/4 xl:w-2/3"
                   >
                     <h3
                       class="font-butlermedium text-secondary text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
@@ -56,7 +56,7 @@
                   style="background-image: url(/assets/img/hero-slide-03.jpg)"
                 >
                   <div
-                    class="py-36 px-5 sm:px-10 md:px-12 xl:px-24 text-center sm:text-left sm:w-5/6 lg:w-3/4 xl:w-2/3"
+                    class="py-48 px-6 sm:px-10 md:px-12 xl:px-24 text-center sm:text-left sm:w-5/6 lg:w-3/4 xl:w-2/3"
                   >
                     <h3
                       class="font-butlermedium text-secondary text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
@@ -79,7 +79,7 @@
                   style="background-image: url(/assets/img/hero-slide-04.jpg)"
                 >
                   <div
-                    class="py-36 px-5 sm:px-10 md:px-12 xl:px-24 text-center sm:text-left sm:w-5/6 lg:w-3/4 xl:w-2/3"
+                    class="py-48 px-6 sm:px-10 md:px-12 xl:px-24 text-center sm:text-left sm:w-5/6 lg:w-3/4 xl:w-2/3"
                   >
                     <h3
                       class="font-butlermedium text-secondary text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
@@ -101,7 +101,7 @@
                   style="background-image: url(/assets/img/hero-slide-05.jpg)"
                 >
                   <div
-                    class="py-36 px-5 sm:px-10 md:px-12 xl:px-24 text-center sm:text-left sm:w-5/6 lg:w-3/4 xl:w-2/3"
+                    class="py-48 px-6 sm:px-10 md:px-12 xl:px-24 text-center sm:text-left sm:w-5/6 lg:w-3/4 xl:w-2/3"
                   >
                     <h3
                       class="font-butlermedium text-secondary text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
@@ -353,7 +353,9 @@
             >
               Let's keep in touch
             </h3>
-            <p class="font-hkregular text-white text-lg sm:text-xl pt-3 px-6">
+            <p
+              class="font-hkregular font-bold text-white text-lg sm:text-xl pt-3 px-6"
+            >
               Join our list and save 15% off your first order.
             </p>
             <form class="pt-10 sm:pt-12">
